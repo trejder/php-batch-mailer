@@ -46,10 +46,28 @@ You can, of course, create this file in Excel or any other program, that support
 CSV files. Only remember to keep each recipient in separate line and that each line
 must contain three fields.
 
+If this is too complicated, read next chapter for the live example.
+
 In current version `CSVMailer` is set to send digitally signed PDFs, so it will
 seek for `filename` and `filename.XAdES` files. For example `09102_T.pdf` and `09102_T.pdf.XAdES`
 files. If it won't find both files, it won't sent e-mail to particular recipient
 and will skip to next line of `list.csv`. Fix the code, if you don't like that.
+
+## Some tests
+
+File `mailer.php` is all, that you need. File `list.csv` and `T` and `N` folders
+are added for tests.
+
+And some files to `N` or `T` folders or use example ones. Remember to always add
+a `file` (main file) and `file.XAdES` (signature file accompanying it). You can use 
+only one of these folders, but you can't change their names without changing code,
+because support for either `T` or `N` folder (and first argument in list file is
+currently hard-coded.
+
+Edit `list.csv` and change folder (1st field), filename (2nd field) and recipient
+(3rd filed) for each line. And new lines (recipients) or remove unnecessary ones.
+You can rename `list.csv` to anything, you want, only remember to adjust argument,
+you pass to `mailer.php`.
 
 ## Last words
 
