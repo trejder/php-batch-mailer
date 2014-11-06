@@ -38,8 +38,13 @@ Where `list.csv` is a CSV file (any name supported) with e-mails in following fo
     
 Each recipient must be put into separate line and each line must contain exactly
 three fields, separated with `;`. First value is either `T` or `N` and points to
-a subfolder in a folder, from where you run `mailer.php`. Second field names file
-from that folder and last field must be a valid e-mail address of the recipient.
+a subfolder (in a folder, from which `mailer.php` was executed), where files are
+kept. Second field names file from that folder and last field must be a valid e-mail
+address of the recipient.
+
+You can, of course, create this file in Excel or any other program, that supports
+CSV files. Only remember to keep each recipient in separate line and that each line
+must contain three fields.
 
 In current version `CSVMailer` is set to send digitally signed PDFs, so it will
 seek for `filename` and `filename.XAdES` files. For example `09102_T.pdf` and `09102_T.pdf.XAdES`
@@ -48,8 +53,8 @@ and will skip to next line of `list.csv`. Fix the code, if you don't like that.
 
 ## Last words
 
-This code is based on few examples, pages and articles. You'll find link to these
-references inside source code.
+This code is based on few examples, pages and articles. Links to these references
+are inside the code.
 
 I don't like spam, most reasonable people doesn't like spam and the rest of intelligent
 world doesn't like spam as well. If I ever learn, that you used this piece of code
