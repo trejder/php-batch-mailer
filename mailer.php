@@ -45,12 +45,16 @@ class CSVMailer
 
         /**
          * Validate, if main file and signature file (second argument) exists.
+         * 
+         * This could be, of course, done in one line. But I did it this way, to
+         * ease life of people, who must get rid of signature file existence checking.
          */
         $mainFile = $type.DIRECTORY_SEPARATOR.$file;
         $sigFile = $mainFile.'.XAdES';
 
-        if(!file_exists($mainFile) || !file_exists($sigFile)) return $this->printError('missingFile', $mainFile);
-
+        if(!file_exists($sigFile)) return $this->printError('missingSigFile', $sigFile);
+        if(!file_exists($mainFile)) return $this->printError('missingMainFile', $mainFile);
+        
         /**
          * Validate e-mail address.
          *
@@ -190,7 +194,8 @@ class CSVMailer
         $errorMessages = array
         (
             'invalidEmail'=>'Invalid e-mail address (3rd argument). Found "%s".',
-            'missingFile'=>'Missing main or signature file (2nd argument) for "%s".',
+            'missingMainFile'=>'Missing main file (2nd argument) for "%s".',
+            'missingSigFile'=>'Missing signature file (2nd argument) for "%s".',
             'missingInputFile'=>'Unable to open "%s" file. File is missing or invalid.',
             'incorrectType'=>'Wrong type (1st argument). Found "%s" instead of either "N" or "T".',
             'wrongInput'=>"Incorrect number of arguments. Correct call example:\n  php mailer.php list.csv\n\nWhere:\n  list.csv -- CSV file with e-mails in form:\n  T|N;filename;receipient\n"

@@ -11,14 +11,15 @@ use an external library and sometimes you want to prove yourself, that you can d
 this without it.
 
 It, of course, can also be an example of how to write command-line scripts in PHP,
-for peoples, how doesn't tasted this kind of pleasure so far.
+for people, who doesn't tasted this kind of pleasure so far.
 
 Note, that `CSVMailer` class it is part of bigger, private project. You'll find 
-some border lines which you maybe will need to change to suit your needs.
+some border lines here, which you maybe will need to change, to suit your needs.
 
 ## Installation
 
-Copy `mailer.php` anywhere.
+Copy `mailer.php` anywhere, where you can run it from command-line. You're done.
+Congrats.
 
 As with every piece of PHP, that bases on `mail()` function, you have to properly
 configure your server and MTA (mail transport agent) to actually send e-mails. Just
@@ -51,18 +52,22 @@ If this is too complicated, read next chapter for the live example.
 In current version `CSVMailer` is set to send digitally signed PDFs, so it will
 seek for `filename` and `filename.XAdES` files. For example `09102_T.pdf` and `09102_T.pdf.XAdES`
 files. If it won't find both files, it won't sent e-mail to particular recipient
-and will skip to next line of `list.csv`. Fix the code, if you don't like that.
+and will skip to next line of `list.csv`.
+
+Fix the code, if you don't like that. Delete line `55` (and possibly `198`) and change
+line `68` from `$files = array($mainFile, $sigFile);` to `$files = array($mainFile);`.
 
 ## Some tests
 
 File `mailer.php` is all, that you need. File `list.csv` and `T` and `N` folders
-are added for tests.
+are added for tests only.
 
-And some files to `N` or `T` folders or use example ones. Remember to always add
-a `file` (main file) and `file.XAdES` (signature file accompanying it). You can use 
-only one of these folders, but you can't change their names without changing code,
-because support for either `T` or `N` folder (and first argument in list file is
-currently hard-coded.
+Add some files to `N` or `T` folders or use example ones. You can use only one of
+these folders, but you can't change their names without changing code, because support
+for either `T` or `N` folder (and first argument in list file is currently hard-coded.
+
+Remember to always add a `file` (main file) and `file.XAdES` (signature file accompanying
+it), unless you made a modification mentioned in last paragraph of previous chapter.
 
 Edit `list.csv` and change folder (1st field), filename (2nd field) and recipient
 (3rd filed) for each line. And new lines (recipients) or remove unnecessary ones.
@@ -75,8 +80,8 @@ This code is based on few examples, pages and articles. Links to these reference
 are inside the code.
 
 I don't like spam, most reasonable people doesn't like spam and the rest of intelligent
-world doesn't like spam as well. If I ever learn, that you used this piece of code
-for sending spam, I'll send you a swarm of _crazy bytes_, that will wipe out memory
+world doesn't like spam as well. If _we_ ever learn, that you used this piece of code
+for sending spam, _we_ will send you a swarm of _crazy bytes_, that will wipe out memory
 of all the electronic devices in your entire network and ten miles around it. Yes,
-we can do that. No, this is not impossible. We only convinced the world, that this
+_we_ can do that. No, this is not impossible. _We_ only convinced the world, that this
 is impossible, to keep mugols, like you, silent. Remember, you have been warned.
