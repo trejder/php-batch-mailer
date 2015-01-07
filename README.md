@@ -1,20 +1,17 @@
 # PHP Batch Mailer
 
-This is a simple PHP batch mailer, a `CSVMailer` class. It must be run from command-line.
-It allows to sent e-mails with many attachments to many recipients.
+This is a simple PHP batch mailer (a `CSVMailer` class). It must be run from command-line.
+It allows to sent e-mails with many attachments to many recipients. **This class is written
+for a specific purpose (part of bigger, private project) and therfore you may find some
+obstacles or things, that you may not like. You'll have to change or fix them yourself.**
 
 This code can also be used as an example of how to send mails with attachments in
-pure PHP (using `mail()` function only and proper headers), without need of any mailing
-library. Of course, that it is thousand times better to use ready, out-of-the box
-solution, like [PHPMailer](http://phpmailer.worxware.com/). But, sometimes you can't
-use an external library and sometimes you want to prove yourself, that you can do
-this without it.
+pure PHP (using `mail()` function only and proper headers). Of course, is much better
+to use out-of-the box solutions, like [PHPMailer](http://phpmailer.worxware.com/).
+But, sometimes you simply can't use an external library or must use pure PHP code.
 
-It, of course, can also be an example of how to write command-line scripts in PHP,
-for people, who doesn't tasted this kind of pleasure so far.
-
-Note, that `CSVMailer` class it is part of bigger, private project. You'll find 
-some border lines here, which you maybe will need to change, to suit your needs.
+This class can also be an example of writing command-line scripts in PHP (for people,
+who doesn't tasted this kind of pleasure so far! :).
 
 ## Installation
 
