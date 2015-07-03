@@ -1,8 +1,10 @@
 # PHP Batch Mailer
 
 This is a simple PHP batch mailer (a `CSVMailer` class). It must be run from command-line.
-It allows to sent e-mails with many attachments to many recipients. **This class is written
-for a specific purpose (part of bigger, private project) and therfore you may find some
+It allows to sent e-mails with many attachments to many recipients.
+
+**This class is written
+for a specific purpose (part of bigger project) and therfore you may find some
 obstacles or things, that you may not like. You'll have to change or fix them yourself.**
 
 This code can also be used as an example of how to send mails with attachments in
