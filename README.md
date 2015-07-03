@@ -13,6 +13,8 @@ But, sometimes you simply can't use an external library or must use pure PHP cod
 This class can also be an example of writing command-line scripts in PHP (for people,
 who doesn't tasted this kind of pleasure so far! :).
 
+**This project ABANDONED, because I don't code in pure PHP anymore! There is no wiki, issues and no support. There will be no future updates. Unfortunately, you're on your own.**
+
 ## Installation
 
 Copy `mailer.php` anywhere, where you can run it from command-line. You're done.
@@ -82,3 +84,5 @@ for sending spam, _we_ will send you a swarm of _crazy bytes_, that will wipe ou
 of all the electronic devices in your entire network and ten miles around it. Yes,
 _we_ can do that. No, this is not impossible. _We_ only convinced the world, that this
 is impossible, to keep mugols, like you, silent. Remember, you have been warned.
+
+**This project ABANDONED, because I don't code in pure PHP anymore! There is no wiki, issues and no support. There will be no future updates. Unfortunately, you're on your own.**
